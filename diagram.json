@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "author": "Matheus",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-pi-pico",
+      "id": "pico",
+      "top": 0,
+      "left": 0,
+      "attrs": { "env": "micropython-20260406-v1.28.0" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -109.2,
+      "left": -159.4,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -109.2,
+      "left": -121,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -109.2,
+      "left": -82.6,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -43.75,
+      "left": -20.6,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -24.55,
+      "left": -30.2,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r4",
+      "top": -62.95,
+      "left": -1.4,
+      "rotate": 180,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot_carga",
+      "top": 40,
+      "left": -160,
+      "attrs": { "value": "50" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr_solar",
+      "top": 40,
+      "left": -40,
+      "attrs": { "lux": "500" }
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "rele_energia",
+      "top": 40,
+      "left": 80,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "botao_sessao",
+      "top": 40,
+      "left": 150,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": 65,
+      "left": 150,
+      "attrs": { "value": "10000" }
+    }
+  ],
+  "connections": [
+    [ "led3:A", "r4:2", "green", [ "v0" ] ],
+    [ "led2:A", "r2:2", "green", [ "v0" ] ],
+    [ "led1:A", "r3:2", "green", [ "v0" ] ],
+    [ "r2:1", "pico:GP2", "green", [ "v0" ] ],
+    [ "r3:1", "pico:GP3", "green", [ "v0" ] ],
+    [ "led3:C", "pico:GND.1", "black", [ "v0" ] ],
+    [ "led2:C", "pico:GND.2", "black", [ "v0" ] ],
+    [ "led1:C", "pico:GND.3", "black", [ "v163.2", "h86.8" ] ],
+    [ "r4:1", "pico:GP1", "green", [ "v0" ] ],
+
+    [ "pot_carga:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "pot_carga:GND", "pico:GND.4", "black", [ "v0" ] ],
+    [ "pot_carga:SIG", "pico:GP26", "blue", [ "v0" ] ],
+
+    [ "ldr_solar:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "ldr_solar:GND", "pico:GND.5", "black", [ "v0" ] ],
+    [ "ldr_solar:AO", "pico:GP27", "blue", [ "v0" ] ],
+
+    [ "rele_energia:IN", "pico:GP4", "green", [ "v0" ] ],
+    [ "rele_energia:VCC", "pico:3V3", "red", [ "v0" ] ],
+    [ "rele_energia:GND", "pico:GND.6", "black", [ "v0" ] ],
+
+    [ "botao_sessao:1.l", "pico:GP5", "green", [ "v0" ] ],
+    [ "botao_sessao:2.l", "pico:GND.7", "black", [ "v0" ] ],
+    [ "botao_sessao:1.l", "r6:1", "blue", [ "v0" ] ],
+    [ "r6:2", "pico:3V3", "red", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

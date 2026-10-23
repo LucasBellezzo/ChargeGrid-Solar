@@ -1,0 +1,5 @@
+cenario,demanda_kwh,entregue_kwh,solar_kwh,rede_kwh,pct_solar,pct_demanda_atendida,min_100_solar,min_solar_rede,min_reduzida,pico_importacao_rede_w,co2_evitado_kg,economia_rs
+Dia ensolarado,36.0,32.13,18.13,14.01,56.4,89.3,25,498,197,3500,0.73,16.32
+Dia parcialmente nublado,36.0,31.98,6.38,25.6,19.9,88.8,0,515,205,3500,0.26,5.74
+Dia chuvoso,36.0,31.22,0.0,31.22,0.0,86.7,0,357,363,3500,0.0,0.0
+Dia ensolarado com pico de carga,36.0,30.4,18.0,12.4,59.2,84.5,25,489,206,3500,0.72,16.2
