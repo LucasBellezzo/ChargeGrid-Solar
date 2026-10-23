@@ -16,9 +16,7 @@ Automação de um posto comercial de recarga de veículos elétricos que decide,
 | Matheus Arruda Camara Soares | RM571594 |
 | Matheus Sabino da Silva Guedes | RM572907 |
 
-## Links
 
-- **Vídeo técnico (YouTube, não listado):** `COLE_AQUI_O_LINK_DO_VIDEO`
 - **Repositório:** https://github.com/matheusacsoares/Challenge_FIAP-GoodWe
 - **Projeto Wokwi:** https://wokwi.com/projects/475584415281579009
 
